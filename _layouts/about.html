@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% if page.accent_color %}{% capture accent_color %}{{ page.accent_color }}{% endcapture %}{% endif %}
+
+<div class="page-about" style="--accent: {{ accent_color }}">
+
+    <section class="about">
+        {% if include.divider == true %}
+            <div class="wrap"><hr/></div>
+        {% endif %}
+        <div class="wrap grid">
+        
+            <div class="about__image">
+            <img src="{{ '/images/profile.jpg' | relative_url }}" alt="">
+        
+            {% include component-socials.html %}
+            </div>
+        
+            <div class="about__content">
+                {{content}}
+        
+                <a href="#" class="cta button--fill contact-trigger js-contact">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+    
+</div>
