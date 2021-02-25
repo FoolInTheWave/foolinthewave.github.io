@@ -1,13 +1,14 @@
 ---
-layout: about
-title: About
-permalink: /about/
+title: About Me
+description: 
+subtitle: Hey, I’m Caleb, nice to meet you!
+featured_image: /images/social.jpg
 ---
 
-## Hey, I’m Caleb, nice to meet you!
+![](/images/demo/demo-landscape.jpg)
 
-###### I’m a software developer with 7 years of experience under my belt.
+## I’m a software developer with 7 years of experience under my belt.
 
-My skills include front-end and back-end web development, desktop application development, mobile application development, software design, application deployment, and code refactoring. I’m interested in test-driven development, best coding practices, software frameworks, and open-source software.
+My skills include front-end and back-end web development, desktop application development, software design, application deployment, and code refactoring. I’m interested in test-driven development, best coding practices, software frameworks, and open-source software.
 
 I’d love to learn about your goals and see how I can help you achieve them, feel free to send me an email!

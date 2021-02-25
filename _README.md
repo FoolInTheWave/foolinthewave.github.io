@@ -1,4 +1,4 @@
-# Made by JekyllThemes.io – Instructions
+# Simples by JekyllThemes.io – Instructions
 
 If you have any questions or feedback about the theme, don't hesitate to reach out to hello@jekyllthemes.io for 1-to-1 support direct from the developers.
 
@@ -21,7 +21,7 @@ or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontm
 
 ## Customizing the theme
 
-Made comes packed with lots of options to let you customize the theme.
+Index comes packed with lots of options to let you customize the theme.
 
 ---
 
@@ -29,7 +29,7 @@ Made comes packed with lots of options to let you customize the theme.
 
 The main things you might need to change here are:
 
-`site: Made Jekyll Theme` – change this to your website's name
+`site: Simples Jekyll Theme` – change this to your website's name
 
 `url:` – the full URL that your site will be hosted at, e.g. https://your-domain.com
 
@@ -49,11 +49,13 @@ You'll find this inside the `_data` folder – this is where you can set all of 
 
 **Basic settings**
 
-`site_title` – change this to your website's title. This shows up in the browser's title bar, and in the header and footer.
+`site_title` – change this to your website's title. This shows up in the browser's title bar, and in the header.
+`site_tagline` – change this to be a description of your site. This shows up under the title/logo in the header.
 `favicon_image` – change this to the location of your favicon image, which shows up in the browser's title bar.
 
 **Header settings**
 
+`avatar_image` – change this to the location of your avatar image, which shows up at the top of the header.
 `logo_image` – if you'd like to use a logo instead of plain text title in your header, enter the link to it here.
 `logo_width` – set the width (in pixels) that your logo should appear at. This is useful for adding retina display support – for example if your original image is 400px wide, you could set this value to `200` to display a retina-ready image.
 
@@ -61,18 +63,9 @@ You'll find this inside the `_data` folder – this is where you can set all of 
 
 This allows you to set the links inside your menu. Add each one as a list item with a `title` and `url`. When hosting on GitHub Pages, make sure you leave a trailing `/` at the end of links to category pages (e.g. `/blog/` or `/projects/`).
 
-**Footer settings**
-`logo_image` – if you'd like to use a logo instead of plain text title in your footer, enter the link to it here.
-`logo_width` – set the width (in pixels) that your logo should appear at. This is useful for adding retina display support – for example if your original image is 400px wide, you could set this value to `200` to display a retina-ready image.
-`footer_tagline` – sets the text that dispays underneath the site title/logo in the footer.
+**Grid settings**
 
-**Hero settings**
-
-`background_image` – this option lets you choose the background image for the home page hero section.
-
-**Post settings**
-
-`grid_spacing` – this sets the amount of spacing (in pixels) between each image in an image grid layout.
+`grid_spacing` – this sets the amount of spacing (in pixels) between each item in grid image galleries.
 
 **Contact settings**
 
@@ -83,9 +76,11 @@ The theme comes with a pre-made contact form that you can use with [Formspree](h
 `email_subject` – choose the subject of the email you receive from Formspree.
 `send_button_text` – change the text used on the form submit button.
 
+Hint: you can add the contact form to any page of your site using the include – `{% include contact-form.html %}` – for example if you wanted to have the contact form on your About page.
+
 **Social settings**
 
-Here you can add links to your profiles on social networks, and they'll be shown in the 'about' section. Simply add your URL next to the ones you want to show.
+Here you can add links to your profiles on social networks, and they'll be shown in the footer. Simply add your URL next to the ones you want to show.
 
 **Color settings**
 
@@ -122,7 +117,9 @@ Below these options, you'll see options for each typographical element used in t
 
 Inside the `/images/` folder you'll find a few images included with the theme.
 
-The images in the `/demo/` subfolder are used in the demo project, post and page – you delete those if you don't need them.
+The images in the `/demo/` subfolder are used in the demo project, post and page – you can delete those if you don't need them.
+
+`avatar.jpg` – you should replace this with your own avatar image.
 
 `favicon.png` – you should replace this with the favicon image you'd like to use for your website.
 
@@ -136,17 +133,15 @@ The theme comes with some pages set up ready for your content.
 
 ### The home page – `/index.html`
 
-This is your website home page. You can edit some details in the Front Matter at the top of the page:
-`overtitle` – this sets the small intro text above the main page title.
-`title` – this sets the main page title, which also shows up in the browser's title bar and on search engine results, social shares etc.
-`description` – this sets the intro text that displays next to the main page title, and also the page meta description, which shows up on search engine results, social shares etc.
-`featured_image` – this sets the meta image for the page, which shows up on social shares.
+This is your website home page, showing your latest blog posts. You can edit some details in the Front Matter at the top of the page:
 
-Below the Front Matter is the code for the page. You should edit this to set your title and intro text. Hint - the main <h1> tag respects line breaks on tablet size screens and larger. This is useful if you want to prevent typographic widows.
+`title` – this sets the page title, which shows up in the browser's title bar and on search engine results, social shares etc.
+`description` – this sets the page meta description, which shows up on search engine results, social shares etc.
+`featured_image` – this sets the page meta image, which shows up on social shares.
 
-### The blog page – `/blog/index.html`
+### The projects page – `/projects/index.html`
 
-This is the blog listing page, which shows all your blog posts. You can edit the same things as on the home page to customise it for your website.
+This is the blog listing page, which shows all your project posts. You can edit the same things as on the home page to customise it for your website.
 
 ---
 
