@@ -183,4 +183,4 @@ executor.scheduleAtFixedRate(new RemoveUnusedEntriesTask(15000L), 10, 10, TimeUn
 
 This code works by checking every object in the cache against the time when `RemoveUnusedEntriesTask` started running, and if an object hasn't been used within the last 15 seconds (see `new RemoveUnusedEntriesTask(15000L)` in the code above to see we configured it to remove objects older than 15 seconds), then that object is removed from the cache and its `cleanup` method is executed. Cool stuff yeah?
 
-And there you have it, a fast cache that keeps itself clean. You can find the latest version of my cache [here](https://gist.github.com/FoolInTheWave/ac29231c3d542b3391b291972548724c). This is one of my favorite programs in my toolbelt and it's helped me solve some tough problems, hopefully you can find use for it in your programming too!
+And there you have it, a fast cache that keeps itself clean. You can find the latest version of my cache [here](https://gist.github.com/crmiller64/ac29231c3d542b3391b291972548724c). This is one of my favorite programs in my toolbelt and it's helped me solve some tough problems, hopefully you can find use for it in your programming too!
