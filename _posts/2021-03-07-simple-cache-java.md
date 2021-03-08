@@ -1,17 +1,17 @@
 ---
 title: 'Implementing a Simple Cache in Java'
-date: 2021-03-07 00:00:00
-featured_image: '/images/blog/2021-03-07/floppy.jpg'
+date: 2021-03-08 00:00:00
+featured_image: '/images/blog/2021-03-08/floppy.jpg'
 excerpt: Every programmer keeps a set of reusable utility programs, patterns, and algorithms that they have accumulated over the years. One program in my tool belt that I've made use of multiple times in the past is a simple in-memory cache - let's see how it works!
 ---
 
-![](/images/blog/2021-03-07/floppy.jpg)
+![](/images/blog/2021-03-08/floppy.jpg)
 
 ## The need for fast data access
 
 We all know about databases, they're a great solution for storing large amounts of data with facilities for managing data access from a multitude of consuming systems. However, there is a cost that comes with the security and efficiency that a database offers - processing overhead and added system complexity are a part of that cost. Sometimes we need to store a small amount of data that we need quick access to, especially when it comes to real-time applications such as system locking or session management. An in-memory "database" would do the trick here, otherwise known as a cache.
 
-![](/images/blog/2021-03-07/cash-money.jpg)
+![](/images/blog/2021-03-08/cash-money.jpg)
 
 Cash, cache... clever yeah? Bad jokes and old memes aside, let's see what the implementation of a simple cache in the Java programming language can look like.
 
@@ -58,7 +58,7 @@ public class Cache {
 }
 ```
 
-Looks good so far yeah? We have our `get`, `put`, and `remove` methods to retrieve, insert, and remove items from our cache respectively. But wait, what's with that `CacheableObject` class and why are we using `UUID` objects as the key to accessing items in our backing data strucuture? Remember that the performance of a hash table is dependent on the uniqueness of the keys that are used to identify items in the table - the Java `UUID` class provides a way to generate unique ID values fairly easily (see [UUID.randomUUID](https://devdocs.io/openjdk~8/java/util/uuid#randomUUID--)) and even provides a way to customize that ID generation if needed (see [UUID.nameUUIDFromBytes](https://devdocs.io/openjdk~8/java/util/uuid#nameUUIDFromBytes-byte:A-)). The usage of the `CacheableObject` class will become more apparent later, but at a high level it provides us with an expectation of the kinds of attributes and functionality the objects stored in the cache will have.
+Looks good so far yeah? We have our `get`, `put`, and `remove` methods to retrieve, insert, and remove items from our cache respectively. But wait, what's with that `CacheableObject` class and why are we using `UUID` objects as the key to accessing items in our backing data strucuture? Remember that the performance of a hash table is dependent on the uniqueness of the keys that are used to identify items in the table; the Java `UUID` class provides a way to generate unique ID values fairly easily (see [UUID.randomUUID](https://devdocs.io/openjdk~8/java/util/uuid#randomUUID--)) and even provides a way to customize that ID generation if needed (see [UUID.nameUUIDFromBytes](https://devdocs.io/openjdk~8/java/util/uuid#nameUUIDFromBytes-byte:A-)), thus we can use these unique values as keys for items in our cache. The usage of the `CacheableObject` class will become more apparent later, but at a high level it provides us with an expectation of the kinds of attributes and functionality the objects stored in the cache will have.
 
 Now we need to think about keeping the cache clean. We can certainly keep every object we put in the cache forever (or until the cache is removed from memory) - but that approach would make the memory footprint of the cache larger than needed as well as reduce performance when operating on the objects stored in the cache. Let's add code for a scheduled task that will check each entry in the cache and remove those that haven't been used within a specified time frame - like removing expired products from a shelf at the grocery store.
 ```java
