@@ -1,7 +1,7 @@
 basic_settings:
   site_title: Caleb Miller
   site_tagline: 
-  favicon_image: /images/favicon.png
+  favicon_image: /images/favicon.ico
 
 header_settings:
   avatar_image: /images/avatar.jpg
