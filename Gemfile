@@ -1,8 +1,8 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'jekyll', '3.8.5'
+source "https://rubygems.org"
+gemspec
 
-group :jekyll_plugins do
-  gem 'jekyll-paginate'
-  gem 'jekyll-sitemap'
-end
+gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
+gem 'github-pages', '~> 215'
