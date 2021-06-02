@@ -2,7 +2,7 @@
 layout: post
 title: 'Implementing a Simple Cache in Java'
 date: 2021-03-08 00:00:00
-featured_image: '/images/blog/2021-03-08/floppy.jpg'
+featured_image: '/assets/img/blog/2021-03-08/floppy.jpg'
 excerpt: Every programmer keeps a set of reusable utility programs, patterns, and algorithms that they have accumulated over the years. One program in my tool belt that I've made use of multiple times in the past is a simple in-memory cache - let's see how it works!
 ---
 

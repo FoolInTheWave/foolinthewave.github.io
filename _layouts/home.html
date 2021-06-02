@@ -31,9 +31,15 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        {% if post.featured_image %}
+          <a href="{{ post.url | relative_url }}" class="listing-post-image" style="background-image: url({{ post.featured_image | relative_url }});"></a>
+        {% endif %}
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+          <p class="listing-post-excerpt">
+            {{ post.excerpt }}
+          </p>
         {%- endif -%}
+        <p><a href="{{ post.url | relative_url }}">Read More</a></p>
       </li>
       {%- endfor -%}
     </ul>

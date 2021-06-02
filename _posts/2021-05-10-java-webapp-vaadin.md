@@ -2,7 +2,7 @@
 layout: post
 title: 'Writing a Web App in Java with Vaadin'
 date: 2021-05-10 00:00:00
-featured_image: '/images/blog/2021-05-10/reindeer.png'
+featured_image: '/assets/img/blog/2021-05-10/reindeer.png'
 excerpt: There are many different ways to write a web application nowadays, but JavaScript frameworks like React and Vue reign supreme. Is it possible for a Java developer to write a web app with a limited knowledge of JavaScript? Yes, Vaadin makes it possible for Java developers to write rich web apps pretty much entirely in Java - let's review a simple example of such an app!
 ---
 
