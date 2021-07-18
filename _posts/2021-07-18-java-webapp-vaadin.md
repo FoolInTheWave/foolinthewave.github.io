@@ -1,20 +1,20 @@
 ---
 layout: post
 title: 'Writing a Web App in Java with Vaadin'
-date: 2021-05-10 00:00:00
-featured_image: '/assets/img/blog/2021-05-10/reindeer.png'
+date: 2021-07-18 00:00:00
+featured_image: '/assets/img/blog/2021-07-18/reindeer.png'
 excerpt: There are many different ways to write a web application nowadays, but JavaScript frameworks like React and Vue reign supreme. Is it possible for a Java developer to write a web app with a limited knowledge of JavaScript? Yes, Vaadin makes it possible for Java developers to write rich web apps pretty much entirely in Java - let's review a simple example of such an app!
 ---
 
-![](/assets/img/blog/2021-05-10/reindeer.png)
+![](/assets/img/blog/2021-07-18/reindeer.png)
 
 I'll be going over a simple app at a high level here: it's a tool that takes two JSON objects as input, and highlights differences between those objects as output. This is a single page web app that contains an input section with two text areas for the user to enter their JSON (one text area for each object) and a button that runs the object comparison on the back end, and an output section that displays the JSON objects in a table format, where rows in the table are highlighted if a common field between the objects contains different values. I'll refer to the app as `json-compare` from here on out.
 
 Here is the input section:
-![](/assets/img/blog/2021-05-10/input-section.png)
+![](/assets/img/blog/2021-07-18/input-section.png)
 
 And the output section:
-![](/assets/img/blog/2021-05-10/output-section.png)
+![](/assets/img/blog/2021-07-18/output-section.png)
 
 `json-compare` is a [Spring Boot](https://spring.io/projects/spring-boot) app. Vaadin [integrates nicely with Spring Boot](https://vaadin.com/spring), and while `json-compare` doesn't use Spring's dependency injection mechanism it does make use of libraries that are included in the Spring Boot dependency set such as Jackson for JSON processing and JUnit for unit testing. Spring also includes embedded Apache Tomcat which allows one to run a web app as a regular ol' JAR! The main class of the application will look familiar to those who use Spring Boot in their projects:
 
